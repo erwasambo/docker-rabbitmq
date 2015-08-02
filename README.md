@@ -12,10 +12,10 @@ Different versions of RabbitMQ are located at the github repo [branches](https:/
 
 ### Build the image
 
-To create the image `frodenas/rabbitmq`, execute the following command on the `docker-rabbitmq` folder:
+To create the image `erwasambo/docker-rabbitmq`, execute the following command on the `docker-rabbitmq` folder:
 
 ```
-$ docker build -t frodenas/rabbitmq .
+$ docker build -t erwasambo/docker-rabbitmq .
 ```
 
 ### Run the image
@@ -23,13 +23,13 @@ $ docker build -t frodenas/rabbitmq .
 To run the image and bind to host port 5672:
 
 ```
-$ docker run -d --name rabbitmq -p 5672:5672 frodenas/rabbitmq
+$ docker run -d --name rabbitmq -p 5672:5672 erwasambo/docker-rabbitmq
 ```
 
 If you want also to expose the RabbitMQ Management interface, you will need also to expose port 15672:
 
 ```
-$ docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 frodenas/rabbitmq
+$ docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 erwasambo/docker-rabbitmq
 ```
 
 The first time you run your container, a new user `rabbitmq` with all privileges will be created with a random password.
